@@ -28,7 +28,7 @@ hcp-byon create cluster openstack \
 	--openstack-network-id "$HC_NETWORK_ID" \
 	--openstack-subnet-ids "$HC_SUBNET_ID" \
 	--openstack-router-id "$HC_ROUTER_ID" \
-	--openstack-kas-vip-id "$KAS_VIP_PORT_ID" \
+	--openstack-kas-port-id "$KAS_VIP_PORT_ID" \
 	--machine-cidr "$CIDR" \
 	--pull-secret "$PULL_SECRET" \
 	--ssh-key "$SSH_KEY"
