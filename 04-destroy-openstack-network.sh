@@ -11,6 +11,11 @@ export OS_CLOUD="$ADMIN_OS_CLOUD"
 # Delete OpenStack Resources
 ###############################################
 
+echo "Deleting ports..."
+for PORT in "${PORTS_NAMES[@]}"; do
+    openstack port delete "$port" || true
+done
+
 echo "Deleting routers..."
 for ROUTER in "${ROUTER_NAMES[@]}"; do
     if openstack router show "$ROUTER" >/dev/null 2>&1; then
