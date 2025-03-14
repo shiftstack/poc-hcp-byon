@@ -14,7 +14,7 @@ TENANT_USER="tenant-user"
 HUB_PASSWORD="HubPassword123!"
 TENANT_PASSWORD="TenantPassword123!"
 
-DNS_NAMESERVER="1.1.1.1"
+DNS_NAMESERVER="10.11.5.160"
 
 # Network and subnet details for the customer hostedcluster1 network
 NETWORK_NAME="customer_network_hc1"
