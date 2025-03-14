@@ -10,9 +10,9 @@ HC_SUBNET_ID=$(openstack subnet show -f value -c id $SUBNET_NAME)
 HC_ROUTER_ID=$(openstack router show -f value -c id $ROUTER_NAME)
 KAS_VIP_PORT_ID=$(openstack port show -f value -c id $KAS_VIP_PORT_NAME)
 
-hypershift-byon install --hypershift-image quay.io/emilien/hypershift:byon --tech-preview-no-upgrade
-echo "Wait for the Operator to be ready..."
-sleep 20
+#hypershift-byon install --hypershift-image quay.io/emilien/hypershift:byon --tech-preview-no-upgrade
+#echo "Wait for the Operator to be ready..."
+#sleep 20
 
 hcp-byon create cluster openstack \
 	--control-plane-availability-policy SingleReplica \
@@ -30,5 +30,5 @@ hcp-byon create cluster openstack \
 	--openstack-router-id "$HC_ROUTER_ID" \
 	--openstack-kas-port-id "$KAS_VIP_PORT_ID" \
 	--machine-cidr "$CIDR" \
-	--pull-secret "$PULL_SECRET" \
-	--ssh-key "$SSH_KEY"
+	--pull-secret "${PULL_SECRET}" \
+	--ssh-key "${SSH_KEY}"

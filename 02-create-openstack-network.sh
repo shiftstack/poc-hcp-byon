@@ -49,4 +49,5 @@ openstack network rbac create \
 ###############################################
 
 echo "Creating VIP for KAS..."
+export OS_CLOUD="$HUB_OS_CLOUD"
 openstack port create --network "$NETWORK_NAME" "$KAS_VIP_PORT_NAME"

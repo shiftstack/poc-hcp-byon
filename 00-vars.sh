@@ -33,8 +33,8 @@ PORT_NAMES=("$KAS_VIP_PORT_NAME")
 RBAC_ACTION="access_as_shared"
 
 # Hypershift related:
-RELEASE_IMAGE="registry.build06.ci.openshift.org/ci-ln-9g2hptk/release:latest"
+RELEASE_IMAGE="registry.build06.ci.openshift.org/ci-ln-tzqs0jb/release:latest"
 INGRESS_FIP="192.168.25.177"
 RHCOS_IMAGE="rhcos-4.19"
-PULL_SECRET="~/hypershift/pull-secret.json"
-SSH_KEY="~/hypershift/id_rsa.pub"
+PULL_SECRET="${HOME}/hypershift/pull-secret.json"
+SSH_KEY="${HOME}/hypershift/id_rsa.pub"
